@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-amber.css">
+</head>
+
+<style>
+a:link, a:visited {
+    background-color:#bdebe7;
+    color: rgb(0, 0, 0);
+    border: 3px solid #bdebe7;
+    padding: 10px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: #48f1bf;
+    color: white;
+}
+    * {
+      box-sizing: border-box;
+    }
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #c7fdd7;
+}
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #9ee2d1;
+}
+.header h1 {
+  font-size: 50px;
+}
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+</style>
+</head>
+   
+<div class="header">
+    <h1> Korean Food</h1>
+    </div>
+    <div class="row">
+    <div class="column">
+    <div class="card">
+    
+      <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+        <div class="w3-container w3-theme-d2">
+          <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+          <br>
+          <div class="w3-padding w3-center">
+            <img class="w3-circle" src="image/Jaehyun.jpg" alt="Other" style="width:75%">
+          </div>
+        </div>
+        <a class="w3-bar-item w3-button" href="Main.html">Main</a>
+        <a class="w3-bar-item w3-button" href="lab01.html">Lab01</a>
+        <a class="w3-bar-item w3-button" href="form.html">Form</a>
+        <a class="w3-bar-item w3-button" href="form_reserve.html">Form_Reserve</a>
+        <a class="w3-bar-item w3-button" href="form_table.html">Form_Table</a>
+        </nav>
+        
+        <header class="w3-bar w3-card w3-theme">
+          <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+          <h1 class="w3-bar-item">Images</h1>
+        </header>
+        
+        <div class="w3-container">
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Bibimbap.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Bibimbap</h3></b>
+            <p><h5>Another must-try during your visit to Seoul is bibimbap, a filling and nutritious dish that’s widely available in restaurants, food courts, and street markets. Depending on region and ingredients used, bibimbap can be served as a meat-based or vegetarian dish.</h5></p>
+          </div>
+        </div>  
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Kimji.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Kimji</h3></b>
+            <p><h5> Signature Korean dish has been around for more than 2,000 years, dating back to the Shilla Dynasty. Kimchi consists of Korean cabbage, radish, pumpkin, onion, ginger, and scallion with chili powder, crushed garlic and salted seafood, which is then left to ferment.</h5></p>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Tteokbokki.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Red Rice Cakes (Tteokbokki)</h3></b>
+            <p><h5>Tteokbokki is a traditional Korean street food that’s made with thick slices of garaetteok (boiled rice cake), fish cake, onions, diced garlic, salt, sugar and assorted vegetables that are stir-fried in sweet red chili sauce. Distinguished by its bright red-orange ensemble, this popular snack is usually sold at street vendors and independent snack bars.</h5></p>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Bulgogi.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Bulgogi</h3></b>
+            <p><h5> Bulgogi consists of thin slices of marinated beef sirloin that are cooked alongside sliced onions, green peppers, and garlic using a charcoal burner, resulting in a distinctive smoky flavour. Prior to grilling, the meat is marinated between 2 and 4 hours in a mixture of soy sauce, sesame oil, black pepper, garlic, onions, ginger, and sugar to enhance its flavour and tenderness.</h5></p>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Korean stew.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Korean stew (jjigae)</h3></b>
+            <p><h5>There are many different varieties of jjigae in Seoul, but this Korean stew usually contains meat, seafood or vegetables in a broth seasoned with hot pepper paste (gochujang), fermented miso (gaenjang), soybean paste, or salted fermented shrimp (saeujeot). Usually served as a palate cleanser between heavier dishes, jjigae has a similar consistency to a western stew.</h5></p>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Jajangmyeon.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Jajangmyeon</h3></b>
+            <p><h5>A Korean-Chinese fusion dish, jajangmyeon uses thick handmade wheat noodles topped with raw cucumber slices and a mixture of salty black soybean paste, diced pork and vegetables. Priced from 5,000 won onwards, this hearty noodle dish is great for when you need a quick meal that doesn't break the wallet.</h5></p>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Samgyeopsal.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Samgyeopsal</h3></b>
+            <p><h5>Samgyeopsal is another staple Korean dish that requires little culinary skills, where chunky slices of pork belly are cooked on a grill at the diners’ table. It's then wrapped in lettuce or sesame leaf with dipping sauces and accompaniments such as button mushrooms, green chili peppers, green onions, raw onions and garlic, as well as kimchi.</h5></p>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Korean fried chicken.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Korean fried chicken</h3></b>
+            <p><h5>Korean fried chicken takes on the quintessential American fast food with its own unique flair. Unlike its American counterparts, the chicken is coated with a sweet and spicy sauce (some restaurants add green pepper inside the batter for a spicier kick) before double frying it in vegetable oil.</h5></p>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Spicy cold noodle.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Spicy cold noodle (bibim nengmyun)</h3></b>
+            <p><h5>Bibim nengmyun is served in a stainless steel bowl with a cold broth, julienned cucumbers, Korean pear slices, boiled egg, and slices of cold boiled beef. The long and thin noodles are made from flour and buckwheat or sweet potatoes, though seaweed and green tea are also used for other variations.</h5></p>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-cell-row">
+          <div class="w3-cell" style="width:30%">
+            <img src="image/Ginseng chicken soup.jpg" style="width:100%">
+          </div>
+          <div class="w3-cell w3-container">
+            <b><h3>Ginseng chicken soup (samgyetang)</h3></b>
+            <p><h5>Locals believe that the body’s energy must be replenished during summer, so it is a common practice for them to consume a piping hot bowl of samgyetang (chicken ginseng soup) between the months of June and early September.</h5></p>
+          </div>
+        </div>
+        <hr>
+        </div>
+        
+        <script>
+        closeSidebar();
+        function openSidebar() {
+          document.getElementById("mySidebar").style.display = "block";
+        }
+        
+        function closeSidebar() {
+          document.getElementById("mySidebar").style.display = "none";
+        }
+        </script>
+        </body>
+
+          </body>
+
+  
+    </body>
+    </html>
+            
