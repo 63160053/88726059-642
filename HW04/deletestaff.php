@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['loggedin'])){
+    header("location: login.php");
+}
 require_once("dbconfig.php");
 
 // ตรวจสอบว่ามีการ post มาจากฟอร์ม ถึงจะลบ
@@ -55,11 +59,18 @@ if ($_POST){
                 <td><?php echo $row->stf_name;?></td>
             </tr>
             <tr>
+                <th>Username</th>
+                <td><?php echo $row->username;?></td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td><?php echo base64_decode($row->password);?></td>
+            </tr>
         </table>
         <form action="deletestaff.php" method="post">
             <input type="hidden" name="id" value="<?php echo $row->id;?>">
-            <input type="submit" value="Confirm delete" class="btn btn-danger">
             <button type="button" class="btn btn-warning" onClick="window.history.back()">Cancel Delete</button>
+            <input type="submit" value="Confirm delete" class="btn btn-danger">
         </form>
 </body>
 

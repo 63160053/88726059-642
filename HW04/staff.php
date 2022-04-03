@@ -1,3 +1,11 @@
+<?php
+session_start();
+echo "Welcome ".$_SESSION['stf_name'];
+
+if(!isset($_SESSION['loggedin'])){
+    header("location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,7 +93,7 @@
             echo $table;
         }
         ?>
-        <h1> <a href='documents.php'><span class='glyphicon glyphicon-arrow-left'></span></a></h1>
+        <h1> <a href='document.php'><span class='glyphicon glyphicon-arrow-left'></span></a></h1>
     </div>
 </body>
 

@@ -1,4 +1,8 @@
 <?php
+session_start();
+if(!isset($_SESSION['loggedin'])){
+    header("location: login.php");
+}
 require_once("dbconfig.php");
 
 // ตรวจสอบว่ามีการ post มาจากฟอร์ม ถึงจะลบ
@@ -6,13 +10,17 @@ if ($_POST){
     $id = $_POST['id'];
     $stf_code = $_POST['stf_code'];
     $stf_name = $_POST['stf_name'];
+    $username = $_POST['username'];
+    $password = base64_encode($_POST['password']);
 
     $sql = "UPDATE staff
             SET stf_code = ?, 
-                stf_name = ?
+                stf_name = ?,
+                username = ?, 
+                password = ?       
             WHERE id = ?";
     $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("ssi", $stf_code, $stf_name, $id);
+    $stmt->bind_param("ssssi", $stf_code,$stf_name,$username,$password,$id);
     $stmt->execute();
 
     header("location: staff.php");
@@ -28,6 +36,7 @@ if ($_POST){
     $result = $stmt->get_result();
     $row = $result->fetch_object();
 }
+echo "Welcome ".$_SESSION['stf_name'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,10 +62,17 @@ if ($_POST){
                 <label for="stf_name">ชื่อพนังงาน</label>
                 <input type="text" class="form-control" name="stf_name" id="stf_name" value="<?php echo $row->stf_name;?>">
             </div>
-            
+            <div class="form-group">
+                <label  for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" value="<?php echo $row->username;?>">
+            </div>
+            <div class="form-group">
+                <label  for="password">Password</label>
+                <input  type="password" class="form-control" name="password" id="password" value="<?php echo base64_decode($row->password);?>" >           
+            </div>
             <input type="hidden" name="id" value="<?php echo $row->id;?>">
+            <button type="button" class="btn btn-warning" onClick="window.history.back()">Back</button>
             <button type="submit" class="btn btn-success">Update</button>
         </form>
 </body>
-
 </html>
